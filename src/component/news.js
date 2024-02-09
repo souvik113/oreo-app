@@ -1,0 +1,237 @@
+import React, { Component } from 'react'
+import Card from './Card'
+
+export class news extends Component {
+    
+     articles = [
+      {
+        "source": { "id": null, "name": "CNBC" },
+        "author": "Samantha Subin, Yun Li",
+        "title": "Stock market today: Live updates - CNBC",
+        "description": "The S&P 500 finished Wednesday's regular session on the brink of the 5,000 milestone.",
+        "url": "https://www.cnbc.com/2024/02/07/stock-market-today-live-updates.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/107099147-NYSE-Trading-Floor-OB-Photo-220804-CC-PRESS-4.jpg?v=1695593030&w=1920&h=1080",
+        "publishedAt": "2024-02-08T11:17:00Z",
+        "content": "Stock futures hovered near the flatline Thursday morning after the S&amp;P 500 finished the regular session on the brink of the 5,000 milestone.\r\nFutures on the Dow Jones Industrial Average dipped 6 … [+1304 chars]"
+      },
+      {
+        "source": { "id": null, "name": "CNBC" },
+        "author": "Leslie Josephs",
+        "title": "Spirit Airlines narrows loss to $184 million, says it's on the path back to profitability - CNBC",
+        "description": "Spirit Airlines and JetBlue are appealing a federal judge's decision to block their planned merger.",
+        "url": "https://www.cnbc.com/2024/02/08/spirit-airlines-save-q4-2023-earnings.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/107367701-1706804805042-107367701-1706802276636-IMG_0445.jpg?v=1706804815&w=1920&h=1080",
+        "publishedAt": "2024-02-08T11:07:27Z",
+        "content": "Spirit Airlines' fourth-quarter loss narrowed to nearly $184 million, but its CEO said the carrier is on a path back to profitability and that the domestic air travel market is improving.\r\nThe carrie… [+3108 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Motley Fool" },
+        "author": "John Ballard",
+        "title": "A Bull Market Is Here: 2 AI Stocks to Buy Like There's No Tomorrow - The Motley Fool",
+        "description": "These companies play a big role in the global adoption of artificial intelligence (AI).",
+        "url": "https://www.fool.com/investing/2024/02/08/bull-market-here-2-ai-stocks-buy-like-no-tomorrow/",
+        "urlToImage": "https://g.foolcdn.com/editorial/images/763854/nvidia-logo-at-company-headquarters.jpg",
+        "publishedAt": "2024-02-08T10:05:00Z",
+        "content": "The S&amp;P 500 index hit several new highs in January, pushing the index into bull market territory. Every bull market is defined by a theme. The 1990s was the decade to own internet stocks; the 200… [+3658 chars]"
+      },
+      {
+        "source": { "id": "google-news", "name": "Google News" },
+        "author": "USA TODAY",
+        "title": "Powerball winning numbers for 2/7/2024: $248 million jackpot - USA TODAY",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiXmh0dHBzOi8vd3d3LnVzYXRvZGF5LmNvbS9zdG9yeS9tb25leS9sb3R0ZXJ5LzIwMjQvMDIvMDcvcG93ZXJiYWxsLXdpbm5pbmctbnVtYmVycy83MjUxNjA4NDAwNy_SAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2024-02-08T09:56:34Z",
+        "content": null
+      },
+      {
+        "source": { "id": "business-insider", "name": "Business Insider" },
+        "author": "Grace Kay",
+        "title": "Leaked pay data: How much Tesla factory workers make - Business Insider",
+        "description": "Tesla hiked pay for factory workers across the US last month. Here's how much they make now, according to internal documents.",
+        "url": "https://www.businessinsider.com/how-much-tesla-factory-workers-paid-per-hour-us",
+        "urlToImage": "https://i.insider.com/65b277a343bb77284ba08d88?width=1200&format=jpeg",
+        "publishedAt": "2024-02-08T09:30:00Z",
+        "content": "Tesla hiked pay for factory workers across the US last month.Internal documents viewed by Business Insider reveal how much the factory workers now make.Under the new pay guidelines that were announce… [+3593 chars]"
+      },
+      {
+        "source": { "id": null, "name": "CoinDesk" },
+        "author": "Will Canny",
+        "title": "BlackRock's IBIT, Fidelity's FBTC Have a Liquidity Edge Over Grayscale's GBTC: JPMorgan - CoinDesk",
+        "description": "GBTC is expected to lose further funds to newly created ETFs unless there is a meaningful cut to its fees, the report said.",
+        "url": "https://www.coindesk.com/markets/2024/02/08/blackrock-fidelity-bitcoin-etfs-have-a-liquidity-edge-over-grayscale-jpmorgan/",
+        "urlToImage": "https://www.coindesk.com/resizer/MQkqS0PCYsfaQtutsg5YFw9iGAU=/1200x628/center/middle/cloudfront-us-east-1.images.arcpublishing.com/coindesk/SALPUHWSC5DGLFUCAF5B5YBOTQ.jpg",
+        "publishedAt": "2024-02-08T09:17:00Z",
+        "content": "<ul><li>Outflows from GBTC slowed during the fourth week following SEC approval.\r\n</li><li>Still, GBTC is likely to lose more funds to newly created spot bitcoin ETFs if it doesnt cut its fees.\r\n</li… [+1944 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Yahoo Entertainment" },
+        "author": "Alexandra Canal",
+        "title": "Disney beats on earnings, boosts dividend as streaming losses narrow - Yahoo Finance",
+        "description": "Disney reported earnings after the bell on Wednesday. Here's what to know.",
+        "url": "https://finance.yahoo.com/news/disney-beats-on-earnings-boosts-dividend-as-streaming-losses-narrow-210518309.html",
+        "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2024-01/6edeca90-b72d-11ee-b89f-e9d774e89775",
+        "publishedAt": "2024-02-08T08:59:13Z",
+        "content": "Disney (DIS) said it will boost its cash dividend by 50% on Wednesday as the entertainment giant reported fiscal first quarter earnings that beat expectations while streaming losses narrowed.\r\nDisney… [+6406 chars]"
+      },
+      {
+        "source": { "id": null, "name": "BBC News" },
+        "author": null,
+        "title": "Snoop Dogg and Master P sue Walmart over cereal sabotage claim - BBC.com",
+        "description": "Snoop Dogg and Master P accuse the supermarket of trying to \"choke\" their cereal brand out of the market.",
+        "url": "https://www.bbc.com/news/world-us-canada-68229529",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/CC40/production/_132588225_gettyimages-117668237.jpg",
+        "publishedAt": "2024-02-08T08:57:53Z",
+        "content": "Snoop Dogg and Master P launched their food production company in 2022\r\nAmerican rappers Snoop Dogg and Master P are suing supermarket giant Walmart and a food manufacturing company for sabotaging th… [+2184 chars]"
+      },
+      {
+        "source": { "id": null, "name": "CNBC" },
+        "author": "Karen Gilchrist",
+        "title": "Maersk Q4 earnings 2023: Suspends share buybacks amid Red Sea disruption - CNBC",
+        "description": "Danish shipping giant Maersk on Thursday flagged \"high uncertainty\" in its 2024 earnings outlook as Red Sea disruptions continue to weigh on the industry.",
+        "url": "https://www.cnbc.com/2024/02/08/maersk-q4-earnings-2023-suspends-share-buybacks-amid-red-sea-disruption.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/107370634-1707375692445-gettyimages-1644853448-4053_08_poi_20221111_763.jpeg?v=1707375738&w=1920&h=1080",
+        "publishedAt": "2024-02-08T07:51:47Z",
+        "content": "LONDON Shares of Danish shipping giant Maersk slumped more than 17% in morning trade Thursday after it flagged \"high uncertainty\" in its 2024 earnings outlook amid Red Sea disruptions and an oversupp… [+2430 chars]"
+      },
+      {
+        "source": { "id": null, "name": "YouTube" },
+        "author": null,
+        "title": "SF couple describes riding in Waymo driverless car that was being attacked - ABC7 News Bay Area",
+        "description": "A San Francisco couple says someone was trying to cover the sensors of the Waymo vehicle they were riding in as the light turned green. \"We felt trapped in t...",
+        "url": "https://www.youtube.com/watch?v=_6cV-pI3h6w",
+        "urlToImage": "https://i.ytimg.com/vi/_6cV-pI3h6w/maxresdefault.jpg",
+        "publishedAt": "2024-02-08T07:07:50Z",
+        "content": null
+      },
+      {
+        "source": { "id": null, "name": "CNBC" },
+        "author": "Arjun Kharpal",
+        "title": "SoftBank's Vision Fund logs $4 billion gain, its biggest in nearly 3 years, as tech valuations recover - CNBC",
+        "description": "SoftBank posted its first quarterly profit after four quarters of losses driven by massive gains at its flagship tech investment arm, the Vision Fund.",
+        "url": "https://www.cnbc.com/2024/02/08/softbank-earnings-q3-fy-2023.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/107122654-1663838758188-gettyimages-1200309948-diciommo-softbank200212_nppjx.jpeg?v=1707141152&w=1920&h=1080",
+        "publishedAt": "2024-02-08T06:27:46Z",
+        "content": "SoftBank posted its biggest gain in nearly three years at the flagship tech investment arm, the Vision Fund, in the December quarter amid a recovery in valuation of technology companies.\r\nHere's how … [+3828 chars]"
+      },
+      {
+        "source": { "id": "financial-times", "name": "Financial Times" },
+        "author": "Joe Leahy",
+        "title": "China's prices fall at fastest rate in 15 years as economy battles deflation - Financial Times",
+        "description": "Analysts warn prolonged price declines will undermine business and consumer confidence",
+        "url": "https://www.ft.com/content/14b056b2-ab71-4f32-b829-9493c4bfd650",
+        "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fwww.ft.com%2F__origami%2Fservice%2Fimage%2Fv2%2Fimages%2Fraw%2Fhttps%253A%252F%252Fd1e00ek4ebabms.cloudfront.net%252Fproduction%252Fd2e35004-c901-4a08-9b56-0335d9455728.jpg%3Fsource%3Dnext-article%26fit%3Dscale-down%26quality%3Dhighest%26width%3D700%26dpr%3D1?source=next-opengraph&fit=scale-down&width=900",
+        "publishedAt": "2024-02-08T03:42:32Z",
+        "content": "Chinas consumer prices fell at the fastest rate in 15 years in January, missing analysts forecasts and underlining the challenges for policymakers trying to revive investor confidence in the worlds s… [+3747 chars]"
+      },
+      {
+        "source": { "id": null, "name": "KRON4" },
+        "author": "Aaron Tolentino",
+        "title": "Trader Joe’s recalls products potentially contaminated with Listeria monocytogenes - KRON4",
+        "description": "(KRON) — Trader Joe’s announced Wednesday the recall of four products that could potentially be contaminated with Listeria monocytogenes. The following products are made with cotija cheese, which may contain the bacteria. The products are pictured above. Trad…",
+        "url": "https://www.kron4.com/news/national/trader-joes-recalls-products-potentially-contaminated-with-listeria-monocytogenes/",
+        "urlToImage": "https://www.kron4.com/wp-content/uploads/sites/11/2024/02/Capture_a8c6e9.png?w=1280",
+        "publishedAt": "2024-02-08T03:35:20Z",
+        "content": "(KRON) — Trader Joe’s announced Wednesday the recall of four products that could potentially be contaminated with Listeria monocytogenes. The following products are made with cotija cheese, which may… [+637 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Investopedia" },
+        "author": "Timothy Smith",
+        "title": "PayPal Stock Slides as Company Transformation Weighs on Guidance—Key Price Levels to Watch - Investopedia",
+        "description": "PayPal shares slumped after delivering a soft first-quarter and full-year outlook. Monitor these important chart levels.",
+        "url": "https://www.investopedia.com/paypal-stock-slides-as-company-transformation-weighs-on-guidance-8572141",
+        "urlToImage": "https://www.investopedia.com/thmb/szpFyIEQgDvGcPh9myZLJfcQWjo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-12531606831-df95e6435b1d4d04bc8099dbef6ef87d.jpg",
+        "publishedAt": "2024-02-08T03:03:31Z",
+        "content": "<ul><li>PayPal shares fell after the digital payments company issued weaker-than-expected guidance for the first quarter and full year amid a company transformation.</li><li>The company posted fourth… [+2838 chars]"
+      },
+      {
+        "source": { "id": null, "name": "YouTube" },
+        "author": null,
+        "title": "Bay Area residents raise concerns as AT&T seeks to end landline service - NBC Bay Area",
+        "description": "Thousands of people have been expressing outrage to the California Public Utilities Commission over AT&T’s proposal to take away landline phones permanently....",
+        "url": "https://www.youtube.com/watch?v=slc3n7q79-M",
+        "urlToImage": "https://i.ytimg.com/vi/slc3n7q79-M/maxresdefault.jpg",
+        "publishedAt": "2024-02-08T02:40:49Z",
+        "content": null
+      },
+      {
+        "source": { "id": null, "name": "New York Post" },
+        "author": "Kyle Schnitzer, Emily Crane",
+        "title": "Prominent NYC developer Nir Meir arrested in vast years-long $86M fraud scheme: prosecutors - New York Post ",
+        "description": "Nir Meir, 49, and the since-shuttered HFZ Capital Group he once worked for, allegedly swindled millions from investors, subcontractors and NYC during his five years at the company, according to an …",
+        "url": "https://nypost.com/2024/02/07/metro/prominent-nyc-developer-nir-meir-arrested-in-vast-years-long-86m-fraud-scheme-prosecutors/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/02/76110247.jpg?quality=75&strip=all&w=1024",
+        "publishedAt": "2024-02-08T02:25:00Z",
+        "content": "A former bigwig at a once-prominent Big Apple development firm and a slew of other real estate industry executives were indicted Wednesday for allegedly stealing more than $86 million in a years-long… [+3880 chars]"
+      },
+      {
+        "source": { "id": null, "name": "YouTube" },
+        "author": null,
+        "title": "ARK Invest CEO Cathie Wood: EVs will be the bulk of the auto market in the next 5 years - CNBC Television",
+        "description": "Hosted by Brian Sullivan, “Last Call” is a fast-paced, entertaining business show that explores the intersection of money, culture and policy. Tune in Monday...",
+        "url": "https://www.youtube.com/watch?v=6o93q86JphE",
+        "urlToImage": "https://i.ytimg.com/vi/6o93q86JphE/maxresdefault.jpg",
+        "publishedAt": "2024-02-08T01:38:57Z",
+        "content": null
+      },
+      {
+        "source": { "id": null, "name": "KCCI Des Moines" },
+        "author": "Todd Magel",
+        "title": "Police to help Hy-Vee cut down on crime at its downtown store - KCCI Des Moines",
+        "description": "An increase in loitering and theft is one of the reasons the downtown Hy-Vee store is now closing at 6 p.m.",
+        "url": "https://www.kcci.com/article/downtown-des-moines-hyvee-store-closing-early-crime/46675645",
+        "urlToImage": "https://kubrick.htvapps.com/vidthumb/ed5edbf9-106d-426d-94e3-09fb9ea4d552/f8514323-35ab-487a-ada1-d13ff2897f93.jpg?crop=0.778xw:0.779xh;0.109xw,0&resize=1200:*",
+        "publishedAt": "2024-02-08T01:11:00Z",
+        "content": "DES MOINES, Iowa —Des Moines police say they will work together with Hy-Vee on the crime problem at its downtown Court Avenue store. The grocery store is now closing at 6 p.m., but that could also vi… [+1998 chars]"
+      },
+      {
+        "source": { "id": "reuters", "name": "Reuters" },
+        "author": "Reuters",
+        "title": "Arm shares surge on strong forecast of AI-fueled chip upgrades - Reuters",
+        "description": null,
+        "url": "https://www.reuters.com/technology/arm-forecast-beats-estimates-ai-spurs-chip-upgrades-2024-02-07/",
+        "urlToImage": null,
+        "publishedAt": "2024-02-08T00:44:00Z",
+        "content": null
+      },
+      {
+        "source": { "id": null, "name": "YouTube" },
+        "author": null,
+        "title": "Americans are feeling the financial sting as credit card debt reaches record highs - ABC News",
+        "description": "Millions of Americans are feeling the financial sting as credit card debt reaches record highs.Subscribe to ABC News on YouTube: https://abcnews.visitlink.me...",
+        "url": "https://www.youtube.com/watch?v=RC2S6OE9n5U",
+        "urlToImage": "https://i.ytimg.com/vi/RC2S6OE9n5U/maxresdefault.jpg",
+        "publishedAt": "2024-02-08T00:31:35Z",
+        "content": null
+      }
+    ]
+      constructor(){
+        super();
+        this.state={
+            articles: this.articles
+        }
+      }
+  render() {
+    
+    return (
+        
+        
+      <div >
+        <div className=' container ' >
+            <div className='row ' >{this.state.articles.map((element)=>{
+                return   <div className='col-md-4 my-3' key={element.url}><Card  tittle={element.title?element.title.slice(0,10):""}
+                 description={element.description?element.description.slice(0,20):""} image={element.urlToImage?element.urlToImage:"https://www.sueddeutsche.de/image/sz.1.6345408/1200x675?v=1707400604"} url={element.url.slice}/>
+                </div>
+
+            })}</div>
+            
+           
+
+        </div>
+        
+      </div>
+    )
+  }
+}
+
+export default news
